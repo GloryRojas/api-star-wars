@@ -2,9 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { SectionSw, ArticleSw, PSw, ButtonSw, InputSw } from "./utils/utils";
 
- 
-
-export const Card = () => {
+export const Card = ( {sendPerson}) => {
 	const [items, setItems] = useState([]);
 	const [search, setSearch] = useState("");
 	useEffect(() => {
@@ -22,11 +20,12 @@ export const Card = () => {
 	return (
 		<div>
 			<InputSw placeholder="BUSCAR" onChange={e => setSearch(e.currentTarget.value)}/>
+      <PSw>RESULTADOS</PSw>
 			<SectionSw>
 				{filterPerson.map(item => (
 					<ArticleSw key={item.name+item.heigth}>
-						<PSw size="25px;">{item.name}</PSw>
-						<ButtonSw href="/personaje/">VER DETALLE</ButtonSw>
+						<PSw size="25px">{item.name}</PSw>
+						<ButtonSw onClick={() => sendPerson(item)}>VER DETALLE</ButtonSw>
 					</ArticleSw>	
 				))}
 			</SectionSw>

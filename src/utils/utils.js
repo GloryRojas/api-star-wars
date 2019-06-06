@@ -36,7 +36,7 @@ export const ArticleSw = styled.article`
     padding: 20px 0;
 `;
 
-export const ButtonSw = styled.a`
+export const ButtonSw = styled.button`
     background: none;
     border: none;
     margin: 20px 30%;
