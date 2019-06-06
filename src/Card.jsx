@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { SectionSw, ArticleSw, PSw, ButtonSw } from "./utils/utils";
-import { sendPers } from "./utils/funcion";
 
 const Card = () => {
 	const [items, setItems] = useState([]);
@@ -17,8 +16,8 @@ const Card = () => {
 			{items.map(item => (
 				<ArticleSw key={item.name+item.heigth}>
 					<PSw size="25px;">{item.name}</PSw>
-					<ButtonSw onClick={()=>sendPers(item.name)}>VER DETALLE</ButtonSw>
-				</ArticleSw>
+					<ButtonSw href="/personaje/">VER DETALLE</ButtonSw>
+				</ArticleSw>	
 			)
 		)}
 		</SectionSw>

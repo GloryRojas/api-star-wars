@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionSw, H1Sw, ArticleSwPer, PSw, ButtonSw } from "./utils/utils";
-import { Link } from "react-router-dom";
+
 const Personaje = () => {
 	return (
 		<SectionSw>
