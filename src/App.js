@@ -6,9 +6,9 @@ import Personaje from "./Personaje";
 
 export const App = () => {
   return(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route path="/" exact component={Inicio} />
-      <Route path="/personaje/" component={Personaje} />
+      <Route path="/Personaje/" component={Personaje} />
     </Router>
   )
 };
