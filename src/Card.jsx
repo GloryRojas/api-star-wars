@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { SectionSw, ArticleSw, PSw, ButtonSw, InputSw } from "./utils/utils";
+import { Link } from "react-router-dom";
 
-export const Card = ( {sendPerson}) => {
+export const Card = () => {
 	const [items, setItems] = useState([]);
 	const [search, setSearch] = useState("");
 	useEffect(() => {
@@ -20,12 +21,12 @@ export const Card = ( {sendPerson}) => {
 	return (
 		<div>
 			<InputSw placeholder="BUSCAR" onChange={e => setSearch(e.currentTarget.value)}/>
-      <PSw>RESULTADOS</PSw>
+      		<PSw>RESULTADOS</PSw>
 			<SectionSw>
 				{filterPerson.map(item => (
 					<ArticleSw key={item.name+item.heigth}>
 						<PSw size="25px">{item.name}</PSw>
-						<ButtonSw onClick={() => sendPerson(item)}>VER DETALLE</ButtonSw>
+						<ButtonSw><Link to={{pathname: "/Personaje/", state: {info:item} }}>VER DETALLE</Link></ButtonSw>
 					</ArticleSw>	
 				))}
 			</SectionSw>
