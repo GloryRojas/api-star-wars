@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { SectionSw, ArticleSw, PSw, ButtonSw, InputSw } from "./utils/utils";
+import { SectionSw, ArticleSw, PSw, ButtonSw, InputSw } from "./utils";
 import { Link } from "react-router-dom";
 
 export const Card = () => {

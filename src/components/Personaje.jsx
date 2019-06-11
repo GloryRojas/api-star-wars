@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SectionSw, H1Sw, ArticleSwPer, PSw, ButtonSw } from "./utils/utils";
+import { SectionSw, H1Sw, ArticleSwPer, PSw, ButtonSw } from "../utils/utils";
 import { Link } from "react-router-dom";
 
 const Personaje = (props) => {
@@ -19,8 +19,8 @@ const Personaje = (props) => {
 		<div>
 		{personaje ? 
 			<SectionSw>
-				<H1Sw size="120px" weigth="600" align="left">{personaje.name}</H1Sw>
-				<H1Sw align="left">{home}</H1Sw>
+				<H1Sw size="120px" weigth="600" align="left" left="10%">{personaje.name}</H1Sw>
+				<H1Sw align="left" left="10%">{home}</H1Sw>
 				<ArticleSwPer>
 					<PSw align="left">Peso: {personaje.mass}</PSw>
 					<PSw align="left">Año: {personaje.birth_year}</PSw>
@@ -28,7 +28,7 @@ const Personaje = (props) => {
 				</ArticleSwPer>
 				<ButtonSw><Link to="/">VOLVER</Link></ButtonSw>
 			</SectionSw>
-			: "" };
+			: "" }
 		</div>
 		
 	);

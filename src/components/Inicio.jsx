@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-import { Card } from "./Card";
-import { H1Sw } from "./utils/utils";
+import { Card } from "../utils/Card";
+import { H1Sw } from "../utils/utils";
 
 const Inicio = ({form}) => {
   

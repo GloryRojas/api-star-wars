@@ -5,6 +5,11 @@ export const H1Sw =  styled.h1`
     font-weight: ${props => props.weigth || "100"};
     text-align: ${props => props.align || "center"};
     margin: 0;
+    margin-left:  ${props => props.left || "0"};
+
+    @media only screen and (max-width: 768px) {
+        font-size: 50px;
+      }
 `;
 
 export const InputSw = styled.input`
@@ -12,6 +17,15 @@ export const InputSw = styled.input`
     margin: 10px 0 10px 32%;
     padding: 10px;
     border: 1px solid blue;
+    border-radius: 5px;
+    outline: 0px;
+    &:hover {
+        background: #555;
+    }
+    &: focus {
+        border: 1px solid red;
+        background: none;
+    }
 `;
 
 export const PSw = styled.p`
@@ -34,6 +48,12 @@ export const ArticleSw = styled.article`
     display: inline-block;
     margin: 10px 2.5%;
     padding: 20px 0;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+        margin-left: 5%;
+      }
 `;
 
 export const ButtonSw = styled.button`
@@ -49,4 +69,10 @@ export const ArticleSwPer = styled.article`
     margin: 40px 10%;
     border: 1px solid red;
     padding: 40px;
+
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+        margin-left: 2.5%;
+        padding: 10px;
+      }
 `;
