@@ -2,8 +2,9 @@
   "name": "api-star-wars",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://gloryrojas.github.io/api-star-wars/",
+  "homepage": "https://gloryrojas.github.io/api-star-wars/",
   "dependencies": {
+    "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-modal": "^3.8.1",

@@ -16,7 +16,7 @@ const Personaje = (props) => {
 		}, [personaje]);
 
 	return (
-		<div>
+		<div className="App">
 		{personaje ? 
 			<SectionSw>
 				<H1Sw size="120px" weigth="600" align="left" left="10%">{personaje.name}</H1Sw>
