@@ -57,11 +57,10 @@ export const ArticleSw = styled.article`
 `;
 
 export const ButtonSw = styled.button`
-    background: none;
     border: none;
     margin: 20px 30%;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 12px;
 `;
 
 export const ArticleSwPer = styled.article`

@@ -7,11 +7,14 @@ export const Card = () => {
 	const [items, setItems] = useState([]);
 	const [search, setSearch] = useState("");
 	useEffect(() => {
-		fetch("https://swapi.co/api/people/", {mode: 'cors'})
+		for(let i=1; i<10; i++){
+			let result = [];
+			fetch("https://swapi.co/api/people/?page="+i, {mode: 'cors'})
 			.then(res => res.json())
 			.then(json => {
-				setItems(json.results);
+				setItems(result.concat(json.results));
 			});
+		}
 	}, []);
 
 	const filterPerson = items.filter( person => {
