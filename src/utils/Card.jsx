@@ -1,22 +1,14 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { SectionSw, ArticleSw, PSw, ButtonSw, InputSw } from "./utils";
 import { Link } from "react-router-dom";
+import useData from '../data/useData';
+import Jedi from './Jedi'
 
 export const Card = () => {
-	const [items, setItems] = useState([]);
 	const [search, setSearch] = useState("");
-	useEffect(() => {
-		for(let i=1; i<10; i++){
-			let result = [];
-			fetch("https://swapi.co/api/people/?page="+i, {mode: 'cors'})
-			.then(res => res.json())
-			.then(json => {
-				setItems(result.concat(json.results));
-			});
-		}
-	}, []);
 
+	const items = useData();
 	const filterPerson = items.filter( person => {
 		return person.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
 	});
@@ -27,12 +19,13 @@ export const Card = () => {
       		<PSw>RESULTADOS</PSw>
 			<SectionSw>
 				{filterPerson.map(item => (
-					<ArticleSw key={item.name+item.heigth}>
-						<PSw size="25px">{item.name}</PSw>
-						<ButtonSw><Link to={{pathname: "/Personaje/", state: {info:item} }}>VER DETALLE</Link></ButtonSw>
-					</ArticleSw>	
+						<ArticleSw key={item.name+item.heigth}>
+							<PSw size="25px">{item.name}</PSw>
+							<ButtonSw><Link to={{pathname: "/Personaje/", state: {info:item} }}>VER DETALLE</Link></ButtonSw>
+						</ArticleSw>	
 				))}
 			</SectionSw>
+			<Jedi /> 
 		</div>
 	)
 };

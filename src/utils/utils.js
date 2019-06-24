@@ -14,7 +14,7 @@ export const H1Sw =  styled.h1`
 
 export const InputSw = styled.input`
     width: 34%;
-    margin: 10px 0 10px 32%;
+    margin: 10px;
     padding: 10px;
     border: 1px solid blue;
     border-radius: 5px;

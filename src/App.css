@@ -1,13 +1,14 @@
 *{
   margin: 0;
+  padding: 0;
   color: white;
-}
-
-.App {
-  text-align: center;
   background-image: url(https://ak1.picdn.net/shutterstock/videos/14374231/thumb/4.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
 }
